@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- load jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var d = new Date();
+            $("#h1").html("News for " + d.toLocaleDateString());
+        });
+    </script>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="jQuery.css">
+    <!-- este es el titul de la pagina -->
+    <title>Jquery</title>
+
+</head>
+<!-- este es el body de la pagina -->
+
+<body>
+    <!-- este es el container de la pagina -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- este es el header de la pagina  -->
+            <header id="header" class="col-sm text-center ">
+                <h1>Jquery</h1>
+            </header>
+        </div>
+
+        <div class="row">
+            <!-- este es el navbar de la pagia -->
+            <nav id="nav1" class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo-de-Sena-sin-fondo-Blanco-300x300.png" alt="sena1" width="40" height="40">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-2 bg-dark">
+                <nav id="nov2" class=" navbar navbar-expand- navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav2" aria-controls="nav2" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                        <div class="collapse navbar-collapse" id="nav2">
+                            <ul class="navbar-nav flex-sm-column">
+                                <li class="nav-item">
+                                    <a class="navbar-brand" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Pricing</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <main id="main" class="col-sm-12 col-md-10">
+                <div>
+                    <!-- sintaxis JQUERY -->
+                    <h1>SINTAXIS</h1>
+                    <br>
+                    <p>El código que utiliza jQuery tiene una sintaxis muy agradable, consistente y concisa, así que vamos a tomarnos un minuto para aprender esa sintaxis utilizando un ejemplo que ya entendemos, es decir, modificar el HTML de un elemento.
+                        Nuestro ejemplo utiliza un elemento creado por el siguiente código HTML/CSS que crea una caja vacía de borde verde en la página, cuyo ID es pandora.</p><br>
+                    <div id="pandora">This is Pandora's box</div><br>
+                    <form>
+                        <div>
+                            <textarea rows=4 cols="45">
+var contents = prompt("What to put in Pandora's box?", "all evils");
+console.log("putting "+contents+" into Pandora's box");
+$('#pandora').html(contents);
+                  </textarea><br>
+                            <input type="button" class="btn btn-outline-light" name=Button value="Ejecutar" onclick="eval(this.parentNode.firstElementChild.value)">
+                        </div>
+                    </form>
+                </div>
+
+                <hr>
+
+                <h2>El método html()</h2>
+                <br>
+                <p>Como hemos visto, el método html modifica el contenido de la página. No tiene que tomar sólo texto; en general, puede tomar cualquier HTML. (Para aprender todo lo que hay sobre él, lee la documentación del método html). Aquí hay otro ejemplo,
+                    usando una lista.</p><br>
+                <ol id="horcruxes">
+                    <li>currently empty</li>
+                </ol><br>
+                <form>
+                    <div>
+                        <textarea rows=3 cols="45">
+var items = prompt("Horcruxes", "<li>the diary</li><li>the locket</li>");
+$('#horcruxes').html(items);
+                  </textarea><br>
+                        <input type="button" class="btn btn-outline-light" name=Button value="Ejecutar" onclick="eval(this.parentNode.firstElementChild.value)">
+                    </div>
+                </form>
+
+                <hr>
+
+                <h2>Modificación de atributos</h2>
+                <br>
+                <p>jQuery tiene varias formas de modificar los atributos de un elemento existente. Empecemos por cambiar el CSS de una figura:</p><br>
+                <figure id="fig1">
+                    <img id="img1" src="img/harry-potter-thumb.jpeg" class="img-fluid" alt="Harry Potter">
+                    <figcaption id="cap1">Harry Potter as played by Daniel Radcliffe</figcaption>
+                </figure>
+                <form>
+                    <div>
+                        <textarea rows=5 cols="40">
+$("#fig1").css("border","2px solid red");
+$("#fig1").css("text-align","center");
+$("#fig1").css("padding","10px");
+$("#fig1 figcaption").css("background-color","gold");
+$("#fig1 figcaption").css("color","black");
+                  </textarea><br>
+                        <input type="button" class="btn btn-outline-light" name=Button value="Ejecutar" onclick="eval(this.parentNode.firstElementChild.value)">
+                    </div>
+                </form><br>
+
+                <P>El método .css() toma dos argumentos, una propiedad y un valor, al igual que el CSS estático. Funciona exactamente igual que el CSS en línea. Prueba a inspeccionar los elementos figure y figcaption anteriores; verás que se les han añadido
+                    atributos CSS en línea. (Sin embargo, esto no es un mal uso del CSS en línea, porque el CSS no está mezclado con el código HTML estático; está siendo especificado dinámicamente). Hay otros atributos que podríamos cambiar, como el SRC
+                    y el ALT para la imagen aquí:</P><br>
+                <figure id="fig2">
+                    <img src="img/hermione-granger-thumb.jpeg" class="img-fluid" alt="Hermione Granger">
+                    <figcaption>Hermione Granger as played by Emma Watson</figcaption>
+                </figure>
+                <form>
+                    <div>
+                        <textarea rows=4 cols="45">
+$("#fig2 img").attr("src","img/ron-weasley-thumb.jpeg");
+$("#fig2 img").attr("alt","Ron Weasley");
+$("#fig2 figcaption").html("Ron Weasley as played by Rupert Grint");
+                        </textarea><br>
+                        <input type="button" class="btn btn-outline-light" name=Button value="Ejecutar" onclick="eval(this.parentNode.firstElementChild.value)">
+                    </div>
+                </form>
+
+                <hr>
+
+                <h2>Ocultar/Mostrar elementos</h2>
+                <br>
+                <p>Si quieres hacer desaparecer algo, puedes modificar su CSS para que tenga la propiedad display:none. Podrías deshacer ese cambio para hacerlo reaparecer. Esto es tan común que jQuery tiene métodos especiales, .hide() y show(). Aquí está
+                    nuestra figura de nuevo, esta vez como fig3:</p><br>
+                <figure id="fig3">
+                    <img src="img/hermione-granger-thumb.jpeg" class="img-fluid" alt="Hermione Granger">
+                    <figcaption>Fig3: Hermione Granger as played by Emma Watson</figcaption>
+                </figure>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <form>
+                                    <div>
+                                        <textarea rows=3>
+                      $("#fig3").hide();
+                      </textarea><br>
+                                        <input type="button" class="btn btn-outline-light" name=Button value="Esconder" onclick="eval(this.parentNode.firstElementChild.value)">
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <form>
+                                    <div>
+                                        <textarea rows=3>
+                      $("#fig3").show();
+                      </textarea><br>
+                                        <input type="button" class="btn btn-outline-light" name=Button value="Mostrar" onclick="eval(this.parentNode.firstElementChild.value)">
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <h2>Conjuntos envueltos</h2>
+                <br>
+                <p>Hasta ahora, siempre hemos visto que la parte del selector de la expresión de jQuery escoge un solo elemento. Sin embargo, jQuery es más general y poderoso que eso. En la mayoría de los casos, si el selector coincide con más de un elemento
+                    de la página, jQuery opera sobre todos los elementos de una sola vez. He aquí un ejemplo:</p><br>
+
+                <ol id="characters1">
+                    <li class="gryffindor">Harry</li>
+                    <li class="gryffindor">Ron</li>
+                    <li class="gryffindor">Hermione</li>
+                    <li class="gryffindor">Fred</li>
+                    <li class="gryffindor">George</li>
+                    <li class="ravenclaw">Cho</li>
+                    <li class="hufflepuff">Cedric</li>
+                    <li class="slytherin">Draco</li>
+                    <li class="slytherin">Crabbe</li>
+                    <li class="slytherin">Goyle</li>
+                </ol>
+
+                <form>
+                    <div>
+                        <textarea rows=4 cols="45">
+$("#characters1 li").css("font-size","18px");   // matches 10 elts
+$("#characters1 .gryffindor").css("color","red");  // matches 5 elts
+$("#characters1 .slytherin").hide();    // matches 3 elts
+                        </textarea><br>
+                        <input type="button" class="btn btn-outline-light" name=Button value="Ejecutar" onclick="eval(this.parentNode.firstElementChild.value)">
+                    </div>
+                </form>
+
+                <hr>
+
+                <h2>Encadenamiento de métodos</h2>
+                <br>
+                <p>La función jQuery wrapper siempre devuelve el conjunto de elementos con los que coincide, por lo que puedes volver a operar sobre ella, si quieres. Saber que el wrapper de jQuery siempre devuelve algo es muy útil para encadenar métodos
+                    de jQuery. Esto se hace para evitar almacenar los resultados en variables temporales, o repetir la búsqueda de un conjunto de coincidencias. Así, algunos de nuestros ejemplos anteriores podrían ser aún más concisos:</p><br>
+
+                <figure id="fig4">
+                    <img src="img/harry-potter-thumb.jpeg" class="img-fluid" alt="Harry Potter">
+                    <figcaption>Fig4: Harry Potter as played by Daniel Radcliffe</figcaption>
+                </figure><br>
+
+                <p> Podemos cambiar el CSS añadiendo un borde, centrado, un color de fondo y algo de relleno. Haz clic en el botón para aplicar estos cambios</p><br>
+
+                <form>
+                    <div>
+                        <textarea rows=5 cols="30">
+$("#fig4")
+.css("border","2px solid red")
+.css("text-align","center")
+.css("padding","10px");
+                        </textarea><br>
+                        <input type="button" class="btn btn-outline-light" name=Button value="Ejecutar" onclick="eval(this.parentNode.firstElementChild.value)">
+                    </div>
+                </form>
+
+                <hr>
+
+                <p>Esto no sólo es menos para escribir, es más fácil de entender y es más rápido de ejecutar, porque ahora encuentra el elemento una vez y hace una serie de operaciones en él. <br> Sin embargo, observe que también omitimos el punto y coma
+                    en todas las líneas excepto en la última. El punto y coma rompe la cadena de llamadas al método. <br> Pasemos a un caso más avanzado de encadenamiento, junto con algunos otros trucos interesantes que jQuery puede hacer, a saber<br>                    1.Crear elementos, lo que se puede hacer poniendo código HTML (con paréntesis angulares) en el selector. Dicho elemento no está (todavía) unido a la página web. Se puede pensar que está fuera del escenario.<br> 2.Modificando el elemento
+                    creado, no unido.<br> 3.Adjuntando el elemento a la página web.<br>
+                </p>
+
+                <ol id="characters2">
+                    <li class="gryffindor">Harry</li>
+                    <li class="gryffindor">Ron</li>
+                    <li class="gryffindor">Hermione</li>
+                    <li class="gryffindor">Fred</li>
+                    <li class="gryffindor">George</li>
+                    <li class="ravenclaw">Cho</li>
+                    <li class="hufflepuff">Cedric</li>
+                    <li class="slytherin">Draco</li>
+                    <li class="slytherin">Crabbe</li>
+                    <li class="slytherin">Goyle</li>
+                </ol>
+
+                <form>
+                    <div>
+                        <textarea rows=6 cols="45">
+$("<li>")
+.html("Percy")
+.addClass("gryffindor")
+.css("text-decoration","line-through")
+.appendTo("#characters2");
+                          </textarea><br>
+                        <input type="button" class="btn btn-outline-light" name=Button value="Ejecutar" onclick="eval(this.parentNode.firstElementChild.value)">
+                    </div>
+                </form>
+                <p>El código anterior crea un nuevo elemento de lista vacío, establece su contenido a Percy, añade la clase Gryffindor para darle el estilo correcto, añade algo de CSS adicional para tacharlo (ya que es un git), y finalmente lo adjunta a
+                    la página al final del elemento cuyo ID es characters2 (nuestra lista).<br> No tienes que usar la técnica de encadenamiento si no quieres, pero puede ser muy clara de leer (una vez que te acostumbras) y es comúnmente usada en tutoriales
+                    y ejemplos en línea. La utilizaremos siempre que sea conveniente.</p>
+
+                <hr>
+
+                <h2>Una trampa</h2>
+                <br>
+                <p>La práctica común durante muchos años ha sido poner el código JS en el HEAD de una página web, pero eso nos tiende una trampa. Si escribimos algún código JQ para encontrar un elemento hacerle algo, como hemos hecho muchas veces en esta
+                    lectura, pero el HTML para ese elemento está más abajo en la página, el elemento no existirá cuando el código JQ se ejecute. Aquí hay un ejemplo:</p><br>
+                <div class="col-sm">
+                    <img src="img/Captura.PNG" class="img-fluid" alt="Responsive image">
+                </div>
+                <h1>News for Today</h1>
+                <!-- replaced by today's date -->
+
+                <p>Nuestra intención es bastante clara: encontrar el H1 e insertar la fecha de hoy en él. Sin embargo, cuando el código JavaScript/jQuery se ejecuta, el H1 todavía no existe, por lo que no se rellenará con la fecha de hoy. <br> Y lo que es
+                    peor, ¡no recibiremos un mensaje de error! jQuery ha encontrado con éxito un conjunto de elementos; simplemente ha sido un conjunto vacío, lo que está bien para jQuery, pero no para nosotros.</p>
+
+                <hr>
+
+                <h2>¿Está listo el DOM?</h2>
+                <br>
+                <p>la trampa que acabamos de describir nos lleva a la importante cuestión de cuándo debe ejecutarse nuestro código jQuery. Poner el código en diferentes partes del archivo HTML puede tener diferentes efectos en la página, según el momento
+                    en que el navegador lea e interprete el código. Por eso, normalmente, el código jQuery debe ser ejecutado sólo después de que el DOM haya sido creado y esté listo para la manipulación dinámica. <br> La mayoría de los ejemplos que verás
+                    en la lectura proporcionada, mostrarán código normalmente envuelto en un gran manejador de eventos para el objeto documento, como se muestra a continuación:</p><br>
+                <img src="img/Captura1.PNG" class="img-fluid" alt="Responsive image"><br>
+                <h1 id="h1">News for Today</h1><br>
+
+                <p>Esto funciona correctamente, pero es complejo de entender. Utiliza la función envolvente de jQuery con el objeto documento especial y el resultado obtiene el método ready() se dispara cuando el DOM está listo), y a este método le pasa
+                    como argumento una función anónima. También es una pesadilla sintáctica: fíjate que la última línea es });<br> Otra forma de asegurarse de que el DOM está listo es poner el código JavaScript al final de la página (justo antes de (body)
+                    en lugar de en el head. De esta manera, sabemos que las líneas HTML anteriores ya han sido procesadas por el navegador y el DOM está listo. En otras palabras, el siguiente código también funcionaría para poner la fecha de hoy en el
+                    elemento H1, y es más sencillo y fácil de entender:</p><br>
+
+                <img src="img/Captura2.PNG" class="img-fluid" alt="Responsive image"><br><br>
+
+                <h1 id="h2">News for Today</h1><br>
+
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+                <script>
+                    var d = new Date();
+                    $("#h2").html("News for " + d.toLocaleDateString());
+                </script>
+
+                <hr>
+
+                <!-- <div id="nav-goes-here"></div>
+                          
+                          <script>$("#nav-goes-here").load("home.html nav");</script> -->
+
+                <hr>
+
+                <h2>Material adicional</h2>
+                <br>
+                <p>Si lo desea, puede detenerse aquí. Lo siguiente es para el lector interesado. <br> Supongamos que tenemos algunas definiciones de clase que queremos utilizar:</p><br>
+
+                <figure id="fig2a" class="gryffindor">
+                    <img src="img/hermione-granger-thumb.jpeg" alt="Hermione Granger">
+                    <figcaption>Hermione Granger as played by Emma Watson</figcaption>
+                </figure><br>
+                <p>Haz clic en el botón para cambiar la figura y usar los colores de Slytherin. Intenta cambiar el código y hacer clic de nuevo para cambiar a los colores de Gryffindor.</p><br>
+                <form>
+                    <div>
+                        <textarea rows=3 cols="45">
+                            $("#fig2a").removeClass("gryffindor");
+                            $("#fig2a").addClass("slytherin");
+                            </textarea><br>
+                        <input type="button" class="btn btn-outline-light" name=Button value="Ejecutar" onclick="eval(this.parentNode.firstElementChild.value)">
+                    </div>
+                </form>
+
+                <hr>
+
+                <a type="button" class="btn btn-outline-light" href="./trabajo1/prueba_ajax-json.html">ejercicio1</a>
+                <a type="button" class="btn btn-outline-light" href="./trabajo2/index.php">ejercicio2</a>
+
+            </main>
+        </div>
+
+
+        <div class="row">
+            <footer id="footer" class="col-12 text-center">
+                <img src="img/1045px-Sena_Colombia_logo.svg.png" class="img-fluid" alt="sena1" width="40" height="40">
+                <a>&#169;Andres Tibaquicha</a><br>
+                <a id="ficha">Ficha: 2252471</a>
+            </footer>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

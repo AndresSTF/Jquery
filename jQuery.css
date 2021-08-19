@@ -1,0 +1,64 @@
+#header {
+    background-color: #091115;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: #FFFFFF;
+}
+
+#ficha {
+    position: relative;
+    text-align: end;
+    color: #FFFFFF;
+}
+
+#main {
+    background-color: #040506;
+    color: #FFFFFF;
+}
+
+#pandora {
+    width: 80;
+    margin: 0 auto;
+    border: solid green 5px;
+    padding: 5px;
+}
+
+#horcruxes {
+    width: 80;
+    margin: 0 auto;
+    border: solid green 5px;
+    padding: 5px;
+}
+
+.gryffindor {
+    margin: 0 auto;
+    border: solid red 2px;
+    background-color: gold;
+}
+
+.ravenclaw {
+    margin: 0 auto;
+    border: solid blue 2px;
+}
+
+.hufflepuff {
+    margin: 0 auto;
+    border: solid black 2px;
+    background-color: yellow;
+}
+
+.slytherin {
+    margin: 0 auto;
+    border: solid green 2px;
+    background-color: rgb(182, 182, 182);
+}
+
+#footer {
+    background-color: #191A1A;
+    padding-bottom: 9px;
+    padding-top: 10px;
+}
+
+#footer a {
+    color: #DADADA;
+}
